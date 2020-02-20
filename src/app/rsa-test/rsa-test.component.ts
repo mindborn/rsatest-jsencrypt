@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import * as CryptoJS from 'crypto-js';
-import * as Crypto from 'crypto';
 
 @Component({
   selector: 'app-rsa-test',
