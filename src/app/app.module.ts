@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RsaTestComponent } from './rsa-test/rsa-test.component';
 import { DeployContractComponent } from './deploy-contract/deploy-contract.component';
+import { ChooseWalletComponent } from './choose-wallet/choose-wallet.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RsaTestComponent,
-    DeployContractComponent
+    DeployContractComponent,
+    ChooseWalletComponent
   ],
   imports: [
     BrowserModule,
