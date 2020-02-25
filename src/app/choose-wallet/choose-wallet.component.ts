@@ -20,7 +20,7 @@ export class ChooseWalletComponent implements OnInit {
 
     const fr = new FileReader();
     fr.onload = (result) => {
-      result = result.target.result.split("\r\n");
+      result = result['target']['result'].split("\r\n");
       console.log('result', result);
       this.wallet.PRIVATE_KEY = result[0];
       this.publickey = this.wallet.PUBLIC_KEY = result[1];

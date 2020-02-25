@@ -1,3 +1,20 @@
-<p>
-  transact works!
-</p>
+<table>
+  <tr>
+    <td>Contract</td>
+    <td><input [(ngModel)]='address' /></td>
+  </tr>
+  <tr>
+    <td>Type</td>
+    <td><input [(ngModel)]='type' /></td>
+  </tr>
+  <tr>
+    <td>Command</td>
+    <td><input [(ngModel)]='command' /></td>
+  </tr>
+  <tr>
+    <td>Params</td>
+    <td><input [(ngModel)]='params' /></td>
+  </tr>
+</table>
+
+<button (click)='onSend()'>Send</button>

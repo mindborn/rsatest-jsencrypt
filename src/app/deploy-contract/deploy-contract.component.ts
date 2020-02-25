@@ -21,8 +21,8 @@ export class DeployContractComponent implements OnInit {
   public onDeploy() {
     this.http.post(SmartContractContext.BASE_URL, {
       type: 'create',
-      classname: this.classname,
-      sender: this.wallet.PUBLIC_KEY
+      sender: this.wallet.PUBLIC_KEY,
+      params: [this.classname]
     }).subscribe((response) => {
       console.log(response);
     });
