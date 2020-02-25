@@ -4,7 +4,9 @@
     <td><input type="text" [(ngModel)]='classname'></td>
   </tr>
   <tr>
-    <td colspan='2'><button>Deploy Contract</button></td>
+    <td colspan='2'>
+    <button (click)='onDeploy()'>Deploy Contract</button>
+    </td>
   </tr>
   <tr>
     <td>Contract Address</td>

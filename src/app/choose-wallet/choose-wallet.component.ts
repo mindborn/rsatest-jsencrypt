@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Wallet } from '../wallet';
 
 @Component({
   selector: 'app-choose-wallet',
@@ -9,7 +10,7 @@ export class ChooseWalletComponent implements OnInit {
 
   public publickey;
 
-  constructor() { }
+  constructor(private wallet: Wallet) { }
 
   ngOnInit() {
   }
@@ -19,7 +20,11 @@ export class ChooseWalletComponent implements OnInit {
 
     const fr = new FileReader();
     fr.onload = (result) => {
+      result = result.target.result.split("\r\n");
       console.log('result', result);
+      this.wallet.PRIVATE_KEY = result[0];
+      this.publickey = this.wallet.PUBLIC_KEY = result[1];
     };
+    fr.readAsText(event.target.files[0]);
   }
 }

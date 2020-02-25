@@ -1,4 +1,7 @@
+import { Injectable } from '@angular/core';
+
+@Injectable({ providedIn: 'root' })
 export class Wallet {
-  public static PUBLIC_KEY: string = null;
-  public static PRIVATE_KEY: string = null;
+  public PUBLIC_KEY: string = null;
+  public PRIVATE_KEY: string = null;
 }
