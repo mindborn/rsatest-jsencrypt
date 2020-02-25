@@ -23,7 +23,11 @@ export class TransactComponent implements OnInit {
   public onSend() {
     this.http.post(SmartContractContext.BASE_URL,
       {
-
+        type: this.type,
+        command: this.command,
+        params: [this.params],
+        sender: this.wallet.PUBLIC_KEY,
+        contract: SmartContractContext.CONTRACT_ADDRESS
       }).subscribe((response) => {
         console.log(response);
       });

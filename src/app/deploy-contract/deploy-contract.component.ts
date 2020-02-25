@@ -25,6 +25,7 @@ export class DeployContractComponent implements OnInit {
       params: [this.classname]
     }).subscribe((response) => {
       console.log(response);
+      this.address = response;
     });
   }
 
