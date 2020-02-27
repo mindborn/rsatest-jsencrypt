@@ -10,7 +10,7 @@ import { Wallet } from '../wallet';
 })
 export class DeployContractComponent implements OnInit {
 
-  public address = '';
+  public address:any = '';
   public classname = 'dapp.contracts.TestContract';
 
   constructor(private http: HttpClient, private wallet: Wallet) { }

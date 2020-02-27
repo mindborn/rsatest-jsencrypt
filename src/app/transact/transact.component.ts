@@ -21,6 +21,7 @@ export class TransactComponent implements OnInit {
   }
 
   public onSend() {
+    SmartContractContext.CONTRACT_ADDRESS = this.address;
     this.http.post(SmartContractContext.BASE_URL,
       {
         type: this.type,
